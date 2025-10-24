@@ -1,0 +1,3 @@
+mkdir mon_projet
+cd mon_projet
+echo "# Projet L32" >> README2.md
