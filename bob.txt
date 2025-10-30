@@ -1,2 +1,0 @@
-Ceci est la nouvelle fonctionnalité : bob.txt
-Nouvelle ligne ajoutée dans bob.txt sur ma_branche
