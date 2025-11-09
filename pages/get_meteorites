@@ -1,0 +1,41 @@
+<?php
+// ============================================================
+// Récupère les données de météorites depuis la base
+// ============================================================
+
+// === DEBUG ===
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+header('Content-Type: application/json');
+
+// === 1️⃣ Connexion à la base ===
+require_once '../includes/bd.php'; // ton fichier de connexion
+$bdd = getBD();
+
+// === 2️⃣ Préparation de la requête SQL ===
+// Exemple : on récupère le nom, la masse, la date et les coordonnées
+$sql = "SELECT nom, masse, annee, latitude, longitude, type 
+        FROM meteorites
+        ORDER BY annee DESC
+        LIMIT 100"; // limite pour éviter d’envoyer trop de données
+
+try {
+    $stmt = $bdd->prepare($sql);
+    $stmt->execute();
+    $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // === 3️⃣ Envoi du résultat en JSON ===
+    echo json_encode([
+        "success" => true,
+        "count" => count($resultats),
+        "meteorites" => $resultats
+    ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
+} catch (PDOException $e) {
+    // En cas d’erreur SQL
+    echo json_encode([
+        "success" => false,
+        "message" => "Erreur SQL : " . $e->getMessage()
+    ]);
+}
+?>
