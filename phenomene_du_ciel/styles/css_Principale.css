@@ -1,0 +1,136 @@
+body {
+  height: 100%;
+  display: flex;
+  font-family: Arial, sans-serif;
+  color: #f5f5f5;
+  margin: 0;
+  
+  /* MULTIPLE BACKGROUNDS */
+  background-image: 
+    url('../images/fond-R.png'),     /* image finale : la maison */
+    url('../images/fond-R.jpg'); /* pattern répétitif : ciel et nuages */
+  
+  background-repeat: 
+    no-repeat,  /* la maison ne se répète pas */
+    repeat;     /* le pattern se répète */
+  
+  background-position: 
+    bottom center,  /* la maison en bas au centre */
+    top left;       /* le pattern commence en haut à gauche */
+  
+  background-size: 
+    auto,           /* la maison garde sa taille originale */
+    auto;           /* le pattern garde sa taille originale */
+  
+  flex-direction: column;
+}
+
+
+  
+main {
+  flex: 1; /* prend tout l’espace disponible */
+}
+
+/* CONTENU PRINCIPAL */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  color: #f8d77e;
+}
+
+
+img{
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5%;
+  border: 3px solid #f8d77e; 
+}
+
+
+/* page a propos*/
+.a_propo p{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.45;
+    background: rgba(181, 179, 210, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    backdrop-filter: blur(2px);
+  }
+
+.a_propo_img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5%;
+  border: 3px solid #f8d77e;
+  display: block;
+  margin: 40px auto;
+}
+
+ /* page contacte */
+ .contact p{
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.45;
+    background: rgba(181, 179, 210, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    
+  }
+.contact h2{
+    max-width: 750px;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px auto;
+    text-decoration: underline;
+    line-height: 1.45;
+    background: rgba(181, 179, 210, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    
+  }
+ /* page quizz */
+ .quizz p{
+  margin: 0px auto;
+  font-size: 25px;
+    max-width: 500px;
+    text-align: center;
+    line-height: 1.45;
+    background: rgba(181, 179, 210, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    backdrop-filter: blur(2px);
+    
+  }
+ .quizz_bouton p{
+    margin: 20px auto;
+    color: #000000;
+    background: #f8d77e;
+    max-width: 200px;
+    text-align: center;
+    line-height: 1.45;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    backdrop-filter: blur(2px);
+    
+  }
+
+.quizz h2{
+  font-style: italic;
+  margin: 20px auto;
+  font-size: 50px;
+  color: #f8d77e;
+  text-align: center;
+  }
+
