@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Univers en Direct</title>
-  <link rel="stylesheet" href="../styles/css_Principale.css">
+  <link rel="stylesheet" href="../styles/css_principale.css">
   <link rel="stylesheet" href="../styles/css_Banieres.css">
+  <link rel="icon" type="image/jpg" href="../images/logo.jpg">
 </head>
 <body>
 
@@ -19,6 +20,7 @@
   <p>Adresse :  12 Rue des Étoiles 75014 Paris, France</p>
   <p>Instagram :  @phenomeneduciel</p>
   <p> Serveur Discord :  discord.gg/phenomeneduciel</p>
+  <img src="../images/contacte.png" alt="Logo" class="contact_img">
   </div>
   
 

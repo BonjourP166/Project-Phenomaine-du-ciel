@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Univers en Direct</title>
-  <link rel="stylesheet" href="../styles/css_Principale.css">
+<link rel="stylesheet" href="../styles/css_principale.css">
+  <link rel="stylesheet" href="../styles/css_container.css">
   <link rel="stylesheet" href="../styles/css_Banieres.css">
+  <link rel="icon" type="image/jpg" href="../images/logo.jpg">
 </head>
 <body>
 
@@ -20,6 +22,8 @@
     Répondez à quelques questions amusantes pour tester votre culture astronomique !</p>
   <p>Durée estimée : 2 minutes — 6 questions</p>
   </div>
+
+
 
     <div class="quizz_bouton">
   <p>Commencer le Quizz</p>

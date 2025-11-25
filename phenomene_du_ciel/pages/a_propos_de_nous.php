@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Univers en Direct</title>
-  <link rel="stylesheet" href="../styles/css_Principale.css">
+  <link rel="stylesheet" href="../styles/css_principale.css">
   <link rel="stylesheet" href="../styles/css_Banieres.css">
+  <link rel="icon" type="image/jpg" href="../images/logo.jpg">
 </head>
 <body>
 
@@ -36,10 +37,9 @@ fermement que ce projet doit évoluer avec vous et pour vous. C’est pourquoi n
 
 <p>En somme, ce site est le reflet de notre engagement : transmettre des connaissances,
  simplifier des concepts parfois complexes, et créer un lieu d’échange enrichissant pour tous.</p>
+ <img src="../images/groupe_image.png" alt="Logo" class="a_propo_img">
 </div>
 
-<img src="../images/groupe_image.png" alt="Logo" class="a_propo_img">
- 
   <?php include 'includes/footer.php'; ?>
 </body>
 </html>

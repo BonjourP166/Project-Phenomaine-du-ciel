@@ -3,26 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Univers en Direct</title>
-  <link rel="stylesheet" href="../styles/css_Principale.css">
+  <link rel="stylesheet" href="../styles/css_principale.css">
   <link rel="stylesheet" href="../styles/css_Banieres.css">
   <link rel="stylesheet" href="../styles/css_Formulaire.css">
+  <link rel="icon" type="image/jpg" href="../images/logo.jpg">
 </head>
 <body>
 
   <?php include 'includes/header.php'; ?>
+<div class="i_c">
+  
+     <h1>Connexion:</h1>
 
-     <h1 class="titre">Connexion</h1>
- 
 
-    <form id="formConnexion">
-        <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-        <p>pseudonyme/Email: <input type="email" name="mail" value="<?php echo $_GET['mail'] ?? ''; ?>"><br></p>
-        <p>Mot de passe : <input type="password" name="mdp"><br></p>
-        <p><input type="submit" value="Se connecter"></p>
-    </form>
+<form id="formConnexion" method="POST" action="connexion_traitement.php">
+
+    <!-- Token CSRF obligatoire -->
+    <input type="hidden" name="csrf_token" value="test">
+
+    <p>Email :
+        <input type="email" name="email" value="<?php echo $_GET['email'] ?? ''; ?>">
+    </p>
+
+    <p>Mot de passe :
+        <input type="password" name="mot_de_passe">
+    </p>
+
+    <p>
+        <input type="submit" value="Se connecter">
+    </p>
+</form>
 
     <p><a href="formulaire_inscriptions.php">Vous n’avez pas de compte ? Inscrivez-vous !</a></p>
-
+</div>
 
   <?php include 'includes/footer.php'; ?>
 </body>

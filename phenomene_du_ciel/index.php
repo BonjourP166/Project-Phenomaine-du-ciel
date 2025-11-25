@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -26,4 +27,5 @@ les phénomènes offerts par le ciel.</h2>
 
   <?php include 'includes/footer.php'; ?>
 </body>
+
 </html>
