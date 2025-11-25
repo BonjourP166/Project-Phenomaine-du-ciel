@@ -1,11 +1,3 @@
-verifier et faire tout css pour tout mettre au propre
-mettre tout les banier despliante
-
-changer les fond de la page page de stacy
-faire le petit menue pour ecrire le scrip poue forumr pour les message
-
-
-
 
    /* MULTIPLE BACKGROUNDS */
   background-image: 
@@ -24,4 +16,5 @@ faire le petit menue pour ecrire le scrip poue forumr pour les message
     auto,           /* la maison garde sa taille originale */
     auto;           /* le pattern garde sa taille originale */
   
+
   flex-direction: column;
