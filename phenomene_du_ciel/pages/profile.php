@@ -164,5 +164,9 @@
 
 
 <?php include 'includes/footer.php'; ?>
+<script src="../login_system/js/profil_traitement.js"></script>
+<script src="../login_system/js/profil_modif_traitement.js"></script>
+
 </body>
+
 </html>
