@@ -24,8 +24,15 @@
     <a href="../pages/forum.php">Forum</a>
     <a href="../pages/curiosite.php">Curiosite</a>
     <a href="../pages/quizz.php">Quizz</a>
-    <a href="../login_system/formulaire_connextions.php">connextion</a>
-     <a href="../pages/profile.php">
+    <!--<a href="../login_system/formulaire_connextions.php">connextion</a> -->
+    <?php if (isset($_SESSION['utilisateur'])): ?>
+    <!-- Si l'utilisateur est conecté → montrer Déconnexion -->
+    <button id="btn_deconnexion" class="logout-btn">Déconnexion</button>
+    <?php else: ?>
+    <!-- Si l'utilisateur n'est pas conecté → montrer Connexion -->
+    <a href="../login_system/formulaire_connexions.php">Connexion</a>
+    <?php endif; ?>
+    <a href="../pages/profile.php">
       <img src="../images/profile.png" alt="Profil" class="cercle3">
     </a>
   </nav>
@@ -46,4 +53,7 @@ dropbtn.addEventListener('click', (e) => {
 window.addEventListener('click', () => {
   dropdownMenu.style.display = 'none';
 });
+
 </script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../login_system/js/deconnexion.js"></script>
