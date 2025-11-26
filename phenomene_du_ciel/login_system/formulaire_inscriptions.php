@@ -66,5 +66,8 @@
 </div>
 
 <?php include 'includes/footer.php'; ?>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="js/inscription_traitement.js"></script>
 </body>
+
 </html>
