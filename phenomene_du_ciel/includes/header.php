@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <header class="site-header">
   <div class="logo">
     <img src="images/logo.jpg" alt="Logo" class="cercle1"> 
@@ -43,4 +48,5 @@ dropbtn.addEventListener('click', (e) => {
 window.addEventListener('click', () => {
   dropdownMenu.style.display = 'none';
 });
+
 </script>
