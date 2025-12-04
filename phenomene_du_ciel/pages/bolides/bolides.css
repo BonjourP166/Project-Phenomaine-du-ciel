@@ -1,0 +1,873 @@
+/* =========================================================
+   🌌 BOLIDES — STYLE GLOBAL NASA PREMIUM
+   ========================================================= */
+/* -------------------- */
+/* Fond + animation     */
+/* -------------------- */
+body {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+    margin: 0;
+    padding: 0;
+    background: url("images/bolides.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: "Inter", Arial, sans-serif;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Overlay sombre doux */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+/* Fond d'étoiles (si utilisé en JS) */
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Conteneur global — même marge que page Météorites */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding-bottom: 80px;
+}
+
+
+
+/* =========================================================
+   TITRE PRINCIPAL
+   ========================================================= */
+
+.main-title h1 {
+     font-size: 3.6em;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(255,255,255,0.55),
+                 0 0 28px rgba(255,180,90,0.35);
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 12px;
+
+    font-size: 1.4em;
+    font-weight: 400;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    color: #dcdcdc;
+
+    /* Verre mat + glow léger */
+    text-shadow:
+        0 0 6px rgba(255,255,255,0.35),
+        0 0 18px rgba(255,180,90,0.18);
+
+    /* Apparition fade-in douce */
+    animation: subtitleFade 1.8s ease forwards;
+    transform: translateY(8px);
+    opacity: 0;
+}
+
+@keyframes subtitleFade {
+    to {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================
+   SECTIONS + TITRES
+   ========================================================= */
+
+.section-block {
+    margin-top: 80px;
+    padding-top: 10px;
+    position: relative;
+}
+
+/* petit trait lumineux en haut de section */
+.section-block::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    height: 2px;
+
+    background: linear-gradient(90deg,
+        rgba(0,140,255,0) 0%,
+        rgba(0,140,255,0.45) 25%,
+        rgba(255,190,110,0.55) 50%,
+        rgba(0,140,255,0.45) 75%,
+        rgba(0,140,255,0) 100%
+    );
+
+    filter: blur(8px);
+    opacity: 0.55;
+}
+
+.section-heading {
+    font-size: 2.5em;
+    font-weight: 750;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    color: #ffd488;
+
+    /* Apparition */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: sectionFade 1.4s ease forwards;
+}
+
+@keyframes sectionFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.big-text {
+    font-size: 1.05em;
+    line-height: 1.7em;
+    opacity: 0.95;
+}
+
+.small {
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+/* Texte de transition */
+.transition {
+    font-size: 0.95em;
+}
+
+/* =========================================================
+   ✨ Transition narrative
+   ========================================================= */
+.premium-separator {
+    margin: 55px 0 15px;
+    text-align: center;
+    font-size: 1.25em;
+    opacity: 0.87;
+}
+/* =========================================================
+   INTRODUCTION (bloc verre mat)
+   ========================================================= */
+
+.intro {
+    background: rgba(255, 255, 255, 0.05); /* même transparence */
+    backdrop-filter: blur(4px);
+
+    padding: 25px;
+    border-radius: 10px;
+
+    /* 🔵 Contour bleu identique */
+    border: 1px solid rgba(0, 140, 255, 0.35);
+
+    /* Glow bleu identique au tableau */
+    box-shadow:
+        0 0 14px rgba(0,140,255,0.35),
+        0 8px 22px rgba(0,0,0,0.45);
+
+    margin-top: 20px;
+    animation: fadeSlide 0.9s ease-out;
+}
+
+
+.intro p {
+    font-size: 17px;
+    line-height: 1.7em;
+    opacity: 0.94;
+}
+
+.steps-image {
+    width: 75%;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+}
+
+
+/* =========================================================
+   ETAPES — COMMENT NAÎT UN BOLIDE
+   ========================================================= */
+
+.steps-wrapper {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 40px;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.steps {
+    margin: 10px 0;
+    padding-left: 0;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
+    font-size: 1.02em;
+    line-height: 1.55em;
+    opacity: 0.95;
+}
+
+.step-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 120, 255, 0.25);
+    border: 1px solid rgba(0,120,255,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0,120,255,0.9);
+    box-shadow: 0 0 12px rgba(0,120,255,0.35);
+}
+
+.steps-image img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .steps-wrapper {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}
+
+/* =========================================================
+   COMPARAISON – STYLE TABLEAU DATASET + BARRE JAUNE
+   ========================================================= */
+
+.compare-box {
+    margin-top: 25px;
+    padding: 25px 35px;
+    border-radius: 10px;
+
+    /* Fond comme le tableau dataset */
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(3px);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    position: relative;
+}
+
+/* Barre jaune fine + style dataset */
+.compare-box::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    bottom: 15px;
+    width: 3px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255,205,120,0.95),
+        rgba(255,180,70,0.95)
+    );
+
+    border-radius: 10px;
+
+    /* léger glow comme la légende dataset */
+    box-shadow:
+        0 0 6px rgba(255,200,120,0.35),
+        0 0 12px rgba(255,200,120,0.20);
+}
+
+/* TITRES : sobre + chaud */
+.compare-col h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #ffdba5;
+    text-shadow: 0 0 6px rgba(255,220,150,0.3);
+}
+
+/* LISTES */
+.compare-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.compare-col li {
+    font-size: 0.95em;
+    margin: 4px 0;
+    opacity: 0.92;
+}
+
+/* =========================================================
+   MINI-BLOCS : TYPES DE BOLIDES – STYLE PREMIUM NASA
+   ========================================================= */
+
+.bolide-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Carte premium */
+.bolide-info {
+    padding: 18px 20px;
+    border-radius: 16px;
+
+    /* Fond bleu spatial premium */
+    background: rgba(0, 40, 85, 0.20);
+
+    /* Bordure or premium */
+    border: 2px solid rgba(255,185,80,0.35);
+
+    /* Verre mat */
+    backdrop-filter: blur(8px);
+
+    /* Glow + ombre spatiale */
+    box-shadow:
+        0 0 14px rgba(255,185,80,0.22),
+        0 8px 25px rgba(0,0,0,0.55);
+
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+
+    color: #ffffff;
+    transition: 0.28s ease;
+}
+
+/* Hover premium identique */
+.bolide-info:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 20px rgba(255,185,80,0.45),
+        0 12px 32px rgba(0,0,0,0.65);
+
+    border-color: rgba(255,200,110,0.55);
+}
+
+/* Icône */
+.bolide-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+/* Texte */
+.bolide-info div {
+    font-size: 0.95em;
+    line-height: 1.45em;
+}
+
+/* =========================================================
+   LISTE : OÙ LES VOIR ?
+   ========================================================= */
+
+.nice-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.nice-list li {
+    margin: 6px 0;
+    font-size: 0.98em;
+}
+
+/* =========================================================
+   CARTE / CARD GÉNÉRIQUE
+   ========================================================= */
+
+.card {
+    background: rgba(255,255,255,0.06);
+    border-radius: 16px;
+    margin: 70px auto;  /* augmente les marges haut/bas et gauche/droite */
+    max-width: 1100px;
+    padding: 22px 22px 26px;
+    backdrop-filter: blur(7px);
+    box-shadow:
+        0 6px 22px rgba(0,0,0,0.55),
+        inset 0 0 8px rgba(255,255,255,0.04);
+}
+
+/* =========================================================
+   TABLEAU : DONNÉES DE BOLIDES
+   ========================================================= */
+
+#table-bolides {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 0.95em;
+    color: #e6e6e6;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#table-bolides thead th {
+   background: rgba(255, 255, 255, 0.12);
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#table-bolides td {
+     padding: 10px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+#table-bolides tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+#table-bolides tbody tr:hover {
+    background: rgba(255, 200, 120, 0.15);
+    transition: 0.25s ease;
+}
+
+/* ===========================================
+   🌌 Légende premium (style NASA)
+   =========================================== */
+.legend-box {
+    margin-top: 15px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.05); /* verre mat */
+    border-left: 3px solid #ffae42;        /* doré NASA */
+    border-radius: 8px;
+    font-size: 0.9em;
+    line-height: 1.55em;
+    color: #e6e6e6;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 14px rgba(0,0,0,0.25);
+    opacity: 0.9;
+}
+
+.legend-box p {
+    margin: 6px 0;
+}
+
+
+/* Loader dataset (si utilisé) */
+#loading-bolides {
+    font-size: 0.9em;
+    opacity: 0.85;
+    margin: 12px 0;
+    color: #cccccc;
+}
+
+/* =========================================================
+   BOUTON DE TÉLÉCHARGEMENT
+   ========================================================= */
+
+.download-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 14px;
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+
+    color: #fff;
+    background: rgba(255, 170, 60, 0.12);
+    border: 1px solid rgba(255, 170, 60, 0.4);
+
+    backdrop-filter: blur(6px);
+    box-shadow:
+        0 0 14px rgba(255, 170, 60, 0.25),
+        inset 0 0 8px rgba(255,255,255,0.05);
+
+    transition: 0.25s ease;
+}
+
+.download-button:hover {
+    background: rgba(255, 170, 60, 0.25);
+    border-color: rgba(255, 170, 60, 0.7);
+    box-shadow:
+        0 0 22px rgba(255, 170, 60, 0.45),
+        inset 0 0 10px rgba(255,255,255,0.08);
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   📊 Graphiques NASA (style premium verre mat + lueurs)
+   ========================================================= */
+
+/* 🎨 Style global des canvas */
+anvas {
+    max-width: 72%;
+    display: block;
+    margin: 0 auto 28px;
+
+    background: rgba(20, 25, 45, 0.22);
+    border: 1px solid rgba(255,185,80,0.35);
+    border-radius: 18px;
+
+    padding: 18px;
+    backdrop-filter: blur(6px);
+
+
+
+    transition: 0.28s eas
+}
+
+canvas:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 14px rgba(255,185,80,0.45),
+        0 10px 32px rgba(0,0,0,0.65);
+}
+
+#vitesseChart {
+    max-width: 92% !important;
+    height: 420px !important;
+    margin: 0 auto 38px !important;
+
+    border-radius: 22px;
+    padding: 25px !important;
+}
+
+#energieChart {
+    max-width: 92% !important;
+    height: 420px !important;
+    margin: 0 auto 38px !important;
+
+    border-radius: 22px;
+    padding: 25px !important;
+}
+
+#scatterChart {
+    max-width: 92% !important;
+    height: 420px !important;
+    margin: 0 auto 38px !important;
+
+    border-radius: 22px;
+    padding: 25px !important;
+}
+
+/* 🟦 Card premium autour des graphiques */
+.card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.14);
+    padding: 25px !important;
+    border-radius: 18px;
+    box-shadow: 0 6px 28px rgba(0,0,0,0.4);
+    backdrop-filter: blur(9px);
+    margin-top: 25px;
+}
+
+/* 🟦 Card extra-large (pour les gros graphes) */
+.card.graph-wide {
+    padding: 55px !important;
+    border-radius: 22px;
+    width: 72%;
+    
+
+
+    box-shadow:
+        0 0 22px rgba(0, 120, 255, 0.45),
+        inset 0 0 12px rgba(255,255,255,0.10);
+}
+
+
+
+/* 🎯 Graphique AGRANDI – ex : masse des familles */
+#vitesseChart {
+    max-width: 92% !important;
+    height: 420px !important;
+    margin: 0 auto 38px !important;
+
+    border-radius: 22px;
+    padding: 25px !important;
+}
+/* Sous-titre des graphes */
+.graph-subtitle {
+    text-align: center;
+    font-size: 1.25em;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #ffd488;
+    text-shadow: 0 0 6px rgba(0, 120, 255, 0.35);
+}
+
+/* Légendes */
+.mini-legend {
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.interpretation {
+    font-size: 1em;
+    line-height: 1.7em;
+    color: #f2f2f2;
+    opacity: 0.95;
+    margin-top: 10px;
+}
+
+/* Conteneur interne sans aucune bordure */
+.funfacts-container {
+    grid-template-columns: repeat(4, 260px);
+    justify-content: center;
+}
+
+
+/* Cartes fun fact */
+.funfact-card {
+    
+    background: rgba(255,255,255,0.06);
+    border: 2px solid rgba(255,185,80,0.35); /* contour doré premium */
+    border-radius: 18px;
+    padding: 25px;
+
+    height: 430px; /* même hauteur pour toutes les cartes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 0 12px rgba(255,185,80,0.25),
+        0 8px 22px rgba(0,0,0,0.45);
+
+    transition: 0.25s ease;
+}
+
+.funfact-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 16px rgba(255,185,80,0.45),
+        0 12px 28px rgba(0,0,0,0.65);
+}
+
+/* Icône */
+.funfact-icon {
+    font-size: 2.4em;
+    margin-bottom: 12px;
+}
+
+/* Titre aligné uniformément */
+.funfact-card h3 {
+    min-height: 48px; /* même hauteur pour les titres */
+    font-size: 1.15em;
+    margin-bottom: 12px;
+}
+
+/* Texte */
+.funfact-card p {
+    font-size: 0.95em;
+    line-height: 1.55em;
+    opacity: 0.9;
+}
+
+/* =========================================================
+   ✨ FUN FACTS – Style NASA Premium (comme mini-box)
+   ========================================================= */
+
+/* Conteneur : une seule ligne */
+.funfacts-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;   /* ❗ Empêche le retour à la ligne */
+    margin-top: 50px;
+}
+
+/* Cartes étroites + plus hautes */
+.funfact-card {
+    width: 180px;             /* 📌 Plus étroit */
+    min-height: 250px;        /* 📌 Plus long verticalement */
+    padding: 28px 20px;       /* 📌 Plus d'air en haut/bas */
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255,185,80,0.35);
+    backdrop-filter: blur(6px);
+
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.55em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Le texte reste en haut */
+    align-items: center;
+    gap: 12px;
+
+    box-shadow: 
+        0 0 10px rgba(255,185,80,0.25),
+        0 8px 25px rgba(0,0,0,0.5);
+
+    transition: 0.25s ease;
+}
+
+.funfact-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 14px rgba(255,185,80,0.45),
+        0 10px 32px rgba(0,0,0,0.65);
+}
+
+/* Icône */
+.funfact-icon {
+    font-size: 2.6em;
+    margin-bottom: 10px;
+}
+
+/* Titre */
+.funfact-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    text-shadow: 0 0 8px rgba(255,255,255,0.35);
+}
+
+/* =========================================================
+   CARTES "POUR ALLER PLUS LOIN"
+   ========================================================= */
+
+.more-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.more-card {
+    width: 240px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+
+    background: rgba(0, 35, 85, 0.24);
+    border: 2px solid rgba(255, 190, 90, 0.35);
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 14px rgba(255, 185, 80, 0.25),
+        inset 0 0 12px rgba(255,255,255,0.06),
+        0 10px 30px rgba(0,0,0,0.55);
+
+    transition: 0.25s ease;
+}
+
+.more-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    box-shadow:
+        0 0 12px rgba(255,255,255,0.18),
+        0 6px 20px rgba(0,0,0,0.5);
+}
+
+.more-card:hover {
+    transform: translateY(-4px) scale(1.04);
+    border-color: rgba(255, 205, 110, 0.85);
+    box-shadow:
+        0 0 26px rgba(255, 205, 110, 0.55),
+        inset 0 0 14px rgba(255,255,255,0.10),
+        0 15px 40px rgba(0,0,0,0.7);
+}
+
+.more-title {
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-top: 4px;
+    text-shadow:
+        0 0 12px rgba(255,255,255,0.45),
+        0 0 22px rgba(255,200,120,0.35);
+}
+
+/* =========================================================================
+   🎯 TRANSFORMER AUTOMATIQUEMENT CHAQUE PARTIE EN SECTION PREMIUM METEORITES
+   ========================================================================= */
+
+/* Applique le comportement “section-block” à tous les blocs principaux */
+.card,
+.graph-wide,
+.funfacts-container,
+.more-container {
+    position: relative;
+    margin: 80px auto !important;    /* large séparation comme Meteorites */
+    padding-top: 20px;               /* petit espace interne */
+    width: 85%;                       /* centrage premium */
+}
+
+/* Ajoute le trait lumineux bleu + or au-dessus de CHAQUE bloc */
+.card::before,
+.graph-wide::before,
+.funfacts-container::before,
+.more-container::before {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    height: 2px;
+
+    background: linear-gradient(90deg,
+        rgba(0,140,255,0) 0%,
+        rgba(0,140,255,0.45) 25%,
+        rgba(255,190,110,0.55) 50%,
+        rgba(0,140,255,0.45) 75%,
+        rgba(0,140,255,0) 100%
+    );
+
+    filter: blur(8px);
+    opacity: 0.55;
+}
+
+/* Empêche les cards internes d'être interprétées comme un nouveau bloc */
+.card .card::before {
+    display: none;
+}
+

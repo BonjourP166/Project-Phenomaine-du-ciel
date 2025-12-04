@@ -1,0 +1,19 @@
+/*---------- box fixe ---------- */
+
+#fixed-box-bottom {
+  position: fixed;           /* reste fixe à l’écran */
+  bottom: 25px;                 /* collée en bas */
+  right: 25px;                  /* collée à droite */
+  width: 250px;              /* largeur de la box */
+  height: 33vh;              /* 1/3 de la hauteur de la fenêtre (optionnel) */
+   background: #158dc1;;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(0,180,255,0.45);
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px 0 0 10px;  /* coins arrondis côté gauche */
+box-shadow: 0 0 35px rgba(0,180,255,0.25);
+  z-index: 9999;
+  font-family: Georgia, serif;
+  overflow: auto;            /* scroll si contenu dépasse */
+}
