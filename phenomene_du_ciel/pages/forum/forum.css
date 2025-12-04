@@ -1,0 +1,362 @@
+/* ==========================
+   🌌 FOND GLOBAL PREMIUM
+   ========================== */
+body {
+    background: url("fond_etoiles.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #eaeff7;
+}
+
+/* =======================
+   🌠 TITRES
+   ======================= */
+h1.jaune {
+    margin-top: 100px;
+    color: #ffd375;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(255,200,120,.4);
+}
+
+/* =======================
+   🧩 LAYOUT GLOBAL
+   ======================= */
+.page-container {
+    width: 75%;
+    margin: auto;
+    padding-bottom: 150px;
+}
+
+/* =======================
+   📌 CARTE SUJET
+   ======================= */
+.forum-card,
+.topic-main-card {
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(0,200,255,0.55);
+    border-radius: 18px;
+    padding: 22px;
+    backdrop-filter: blur(8px);
+    margin-bottom: 25px;
+
+    box-shadow: 0 0 8px rgba(0,200,255,.35);
+    transition: .3s;
+}
+
+.forum-card:hover,
+.topic-main-card:hover {
+    border-color: rgba(255,200,120,.85);
+    box-shadow: 0 0 14px rgba(255,200,120,.55);
+    transform: translateY(-2px);
+}
+
+/* Sujet principal centré et moins large */
+.topic-main-card {
+    width: 70%;
+    margin: 30px auto;
+}
+
+/* HEADER MESSAGE */
+.forum-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgba(255,200,120,.6);
+    box-shadow: 0 0 6px rgba(255,200,120,.4);
+}
+
+.forum-header strong {
+    color: #ffdf98;
+}
+.date {
+    margin-left: auto;
+    color: #b4daff;
+    opacity: .85;
+    font-size: .8rem;
+}
+
+/* TITRE + TEXTE */
+.forum-card h3,
+.topic-main-card h2 {
+    color: #ffdf98;
+    margin-bottom: 8px;
+}
+
+.forum-card p,
+.topic-main-card p {
+    line-height: 1.45rem;
+}
+
+/* IMAGE DANS MESSAGE */
+.forum-img {
+    display: block;
+    width: 65%;
+    max-height: 340px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 1px solid rgba(0,200,255,.45);
+    box-shadow: 0 0 14px rgba(0,200,255,.45);
+}
+
+/* =======================
+   💬 BOUTON DISCUSSION
+   ======================= */
+.btn-blue {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 20px;
+    background: rgba(0,150,255,.25);
+    border: 1px solid rgba(0,200,255,.65);
+    border-radius: 10px;
+    color: #c9eeff;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.btn-blue:hover {
+    background: rgba(0,200,255,.45);
+    box-shadow: 0 0 12px rgba(0,200,255,.65);
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   ✨ COMPTEUR DE RÉPONSES
+   =========================== */
+.reply-count {
+    font-size: .85rem;
+    color: #ffd375;
+    opacity: .9;
+    margin-right: 6px;
+}
+
+/* ===========================
+   💬 RÉPONSES
+   =========================== */
+.reponse-card {
+    background: rgba(0,12,30,.40);
+    border: 1px solid rgba(0,200,255,.45);
+    border-radius: 15px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    box-shadow: 0 0 6px rgba(0,200,255,.3);
+    transition: .25s;
+}
+
+.reponse-card:hover {
+    border-color: rgba(255,200,120,.85);
+    box-shadow: 0 0 12px rgba(255,200,120,.55);
+}
+
+/* INDENTATION des réponses imbriquées */
+.children-container {
+    margin-left: 35px;
+    padding-left: 12px;
+    border-left: 1px solid rgba(0,180,255,.45);
+}
+
+/* 📝 FORMULAIRE réponse inline */
+.reply-form-box {
+    margin-top: 10px;
+    background: rgba(0,15,40,.60);
+    border: 1px solid rgba(255,200,120,.45);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+/* champ réponse inline */
+.reply-form-box textarea {
+    width: 100%;
+    min-height: 75px;
+    background: rgba(0,0,0,.55);
+    border: 1px solid rgba(255,200,120,.45);
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+}
+
+/* Lien Répondre */
+.small-reply-btn {
+    margin-top: 6px;
+    font-size: .85rem;
+    color: #6bd0ff;
+    text-decoration: none;
+}
+
+.small-reply-btn:hover {
+    text-decoration: underline;
+    color: #9be3ff;
+}
+
+/* ===========================
+   🚀 BOUTON FLOTTANT POSTER
+   =========================== */
+.quick-post-toggle {
+    position: fixed;
+    bottom: 14px;
+    right: 14px;
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, #00d2ff, #007aff);
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 18px rgba(0,200,255,.8);
+    transition: .35s;
+    cursor: pointer;
+}
+
+.quick-post-toggle:hover {
+    box-shadow: 0 0 28px rgba(255,210,140,.75);
+    transform: scale(1.05);
+}
+
+/* ===========================
+   🛸 BOX POSTER - minimaliste
+   =========================== */
+/* ===========================
+   🚀 BOX NOUVEAU MESSAGE PREMIUM NASA
+   =========================== */
+.quick-post-box {
+    position: fixed;
+    bottom: 14px;
+    right: 14px;
+    width: 285px;
+
+    background: rgba(0, 10, 30, 0.85);
+    border: 1px solid rgba(0,200,255,0.60);
+    border-radius: 22px;
+    padding: 18px 20px;
+    backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 0 16px rgba(0,200,255,0.45),
+        inset 0 0 10px rgba(0,120,255,0.25);
+
+    transition: 0.3s ease;
+    z-index: 2000;
+}
+
+.quick-post-box:hover {
+    box-shadow:
+        0 0 24px rgba(255,200,120,0.55),
+        inset 0 0 14px rgba(255,200,120,0.35);
+    border-color: rgba(255,200,120,0.85);
+    transform: translateY(-2px);
+}
+
+/* Titre */
+.quick-post-box h3 {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    color: #ffe9b3;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(255,200,120,0.45);
+}
+
+/* Champs */
+.quick-post-box input[type="text"],
+.quick-post-box textarea {
+    width: 90%;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(0,200,255,0.45);
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 0.88rem;
+    color: #e9f7ff;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.quick-post-box input[type="text"]:focus,
+.quick-post-box textarea:focus {
+    border-color: rgba(255,200,120,0.85);
+    box-shadow: 0 0 10px rgba(255,200,120,0.45);
+}
+
+.quick-post-box textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* Bouton Publier */
+.btn-gold-small {
+    background: linear-gradient(135deg, rgba(255,185,80,0.55), rgba(255,215,130,0.85));
+    border: none;
+    color: #1b1405;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow:
+        0 0 12px rgba(255,200,120,0.45),
+        inset 0 0 6px rgba(255,200,120,0.35);
+    transition: 0.25s ease;
+}
+
+.btn-gold-small:hover {
+    background: linear-gradient(135deg, rgba(255,200,120,0.80), rgba(255,230,160,1));
+    box-shadow:
+        0 0 18px rgba(255,200,120,0.65),
+        inset 0 0 8px rgba(255,200,120,0.45);
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   🌠 TITRE DE SECTION PREMIUM
+   ============================== */
+.section-title {
+    text-align: center;
+    margin: 90px auto 50px;
+}
+
+.section-title h1 {
+    font-size: 2.4rem;
+    color: #f8d77e;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255,200,120,0.45);
+    position: relative;
+    display: inline-block;
+}
+
+/* Ligne lumineuse dorée */
+.section-title h1::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 3px;
+    border-radius: 6px;
+
+    background: linear-gradient(90deg, transparent,#f8d77e, transparent);
+    box-shadow: 0 0 10px rgba(255,200,120,0.55);
+}
+
+.section-title p {
+    margin-top: 14px;
+    color: #d9f1ff;
+    font-size: 1rem;
+    opacity: .85;
+}

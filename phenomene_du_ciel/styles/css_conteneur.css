@@ -1,0 +1,127 @@
+/* ================================
+   🌠 Conteneur Premium NASA
+   ================================ */
+.conteneur {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    width: 72%;
+    margin: 30px auto;
+    padding: 18px 22px;
+
+    background: rgba(0, 12, 30, 0.45);
+    border: 1px solid rgba(0, 200, 255, 0.60);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 12px rgba(0,200,255,0.35),
+        inset 0 0 10px rgba(0,120,255,0.25);
+    
+    transition: 0.3s ease;
+}
+
+.conteneur:hover {
+    border-color: rgba(255,200,120,0.90);
+    box-shadow:
+        0 0 22px rgba(255,200,120,0.55),
+        inset 0 0 14px rgba(255,200,120,0.35);
+    transform: translateY(-2px);
+}
+
+/* ================================
+   🪐 Image dans le conteneur
+   ================================ */
+.conteneur img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+
+    border-radius: 12px;
+    border: 1px solid rgba(0,200,255,0.65);
+    box-shadow: 0 0 12px rgba(0,200,255,0.35);
+}
+
+/* ================================
+   🌌 Texte
+   ================================ */
+.texte-conteneur {
+    flex: 1;
+}
+
+.texte-conteneur p {
+    margin: 5px 0;
+    color: #e9f7ff;
+    font-size: 0.95rem;
+}
+
+/* 🔗 Bouton Minimaliste Doré Premium */
+.conteneur a {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-top: 10px;
+
+    background: transparent; /* minimal */
+    color: #ffdf98;
+    border: 1px solid rgba(255,200,120,0.6);
+    border-radius: 12px;
+
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+
+    transition: 0.25s ease-in-out;
+}
+
+/* Hover NASA subtil */
+.conteneur a:hover {
+    background: rgba(255,200,120,0.12); /* léger voile doré */
+    border-color: rgba(255,200,120,0.9);
+    color: #ffecc3;
+
+    box-shadow:
+        0 0 10px rgba(255,200,120,0.35); /* léger glow externe */
+}
+
+/* ==============================
+   🌠 TITRE DE SECTION PREMIUM
+   ============================== */
+.section-title {
+    text-align: center;
+    margin: 60px auto 30px;
+}
+
+.section-title h1 {
+    font-size: 2.2rem;
+    color: #f8d77e;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255,200,120,0.45);
+    position: relative;
+    display: inline-block;
+}
+
+/* Ligne lumineuse sous le mot */
+.section-title h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 3px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, transparent, #f8d77e, transparent);
+    box-shadow: 0 0 12px rgba(255,200,120,0.55);
+}#ffd480
+
+.section-title p {
+    font-size: 1.05rem;
+    color: #d9f1ff;
+    opacity: .9;
+    margin-top: 8px;
+}
+

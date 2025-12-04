@@ -1,0 +1,256 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../images/fond-R.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Inter", Arial, sans-serif;
+    color: #fff;
+}
+
+
+main {
+  flex: 1; /* prend tout l’espace disponible */
+}
+
+/* CONTENU PRINCIPAL */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  color: #f8d77e;
+}
+
+
+img{
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5%;
+  border: 3px solid #f8d77e; 
+}
+
+
+/* page a propos*/
+.a_propo {
+ border: 1px solid rgba(0,180,255,0.45);
+  border-radius: 10px; 
+  padding: 20px; 
+  background: rgba(0,0,0,0.45);
+  box-shadow: 0 0 35px rgba(0,180,255,0.25);
+  max-width: 800px; 
+  margin: 30px auto; 
+  box-sizing: border-box;
+  
+  }
+
+.a_propo p{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.45;
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+  }
+
+.a_propo_img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5%;
+  border: 3px solid #f8d77e;
+  display: block;
+  margin: 40px auto;
+  background-color:#f0e1b8;
+}
+
+ /* page contacte */
+  .contact {
+ border: 1px solid rgba(0,180,255,0.45);
+  border-radius: 10px; 
+  padding: 20px; 
+  background: rgba(0,0,0,0.45);
+  box-shadow: 0 0 35px rgba(0,180,255,0.25);
+  max-width: 800px; 
+  margin: 30px auto; 
+  box-sizing: border-box;
+    
+  }
+ .contact p{
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.45;
+    border-radius: 12px;
+  }
+.contact h2{
+    max-width: 750px;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px auto;
+    text-decoration: underline;
+    line-height: 1.45;
+    border-radius: 12px;
+    color: #f8d77e;
+
+  }
+
+.contact_img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5%;
+  display: block;
+  margin: 40px auto;
+  background-color:#ffffff;
+}
+
+ /* page quizz */
+
+/* ==============================
+   🌌 Conteneur Quiz Premium
+   ============================== */
+.quiz-container {
+    width: 60%;
+    margin: 40px auto;
+    text-align: center;
+
+    background: rgba(0, 12, 30, 0.45);
+    border: 1px solid rgba(0,200,255,0.55);
+    border-radius: 18px;
+    padding: 28px 36px;
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 10px rgba(0,200,255,0.35),
+        inset 0 0 10px rgba(0,150,200,0.25);
+
+    transition: 0.3s ease-in-out;
+}
+
+.quiz-container:hover {
+    border-color: rgba(255,200,120,0.85);
+    box-shadow:
+        0 0 22px rgba(255,200,120,0.55),
+        inset 0 0 14px rgba(255,200,120,0.35);
+    transform: translateY(-3px);
+}
+
+.quiz-container p {
+    color: #d9ebff;
+    font-size: 1.05rem;
+    line-height: 1.55rem;
+    margin: 10px 0;
+}
+
+/* ==============================
+   🪐 Bouton Quiz Doré Minimaliste
+   ============================== */
+.btn-gold {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 10px 24px;
+
+    background: transparent;
+    color: #ffdf98;
+    border: 1px solid rgba(255,200,120,0.75);
+    border-radius: 12px;
+
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.4px;
+
+    transition: 0.28s ease;
+}
+
+.btn-gold:hover {
+    background: rgba(255,200,120,0.18);
+    border-color: rgba(255,200,120,1);
+    box-shadow: 0 0 12px rgba(255,200,120,0.55);
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   🌠 TITRE DE SECTION PREMIUM
+   ============================== */
+.section-title {
+    text-align: center;
+    margin: 60px auto 30px;
+}
+
+.section-title h1 {
+    font-size: 2.2rem;
+    color: #f8d77e;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255,200,120,0.45);
+    position: relative;
+    display: inline-block;
+}
+
+/* Ligne lumineuse sous le mot */
+.section-title h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 3px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, transparent, #f8d77e, transparent);
+    box-shadow: 0 0 12px rgba(255,200,120,0.55);
+}
+
+.section-title p {
+    font-size: 1.05rem;
+    color: #d9f1ff;
+    opacity: .9;
+    margin-top: 8px;
+}
+
+
+
+   /* incrition /connextion */
+
+.i_c{
+  border: 1px solid rgba(0,180,255,0.45);
+  border-radius: 10px; 
+  padding: 20px; 
+  background: rgba(0,0,0,0.45);
+  box-shadow: 0 0 35px rgba(0,180,255,0.25);
+  max-width: 800px; 
+  margin: 30px auto; 
+  box-sizing: border-box;  
+
+}
+.i_c h1{
+  font-style: italic;
+  margin: 20px auto;
+  font-size: 50px;
+  color: #f8d77e;
+  text-align: center;
+  }
+
+.i_c a{
+    color: #f8d77e;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 3px 6px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.i_c p{
+  text-align: center;
+}
+
+
