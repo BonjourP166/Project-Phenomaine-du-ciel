@@ -1,0 +1,303 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("fond_etoiles.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Inter", Arial, sans-serif;
+    color: #fff;
+}
+
+/* Bandeau */
+.header-banner {
+    width: 85%;
+    margin: 30px auto;
+    padding: 25px;
+    background: rgba(0,0,0,0.45);
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 0 35px rgba(0,180,255,0.25);
+    border: 1px solid rgba(0,180,255,0.4);
+}
+
+.header-banner h1 {
+    margin-bottom: 8px;
+    font-size: 2.4rem;
+}
+
+.country-info {
+    display: flex;
+    gap: 20px;
+    width: 85%;
+    margin: 25px auto;
+}
+
+.card {
+    flex: 1;
+    background: rgba(0,0,0,0.45);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,180,255,0.4);
+    box-shadow: 0 0 30px rgba(0,180,255,0.2);
+}
+
+.links {
+    width: 85%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    color: white;
+    background: rgba(0,180,255,0.5);
+    border: 1px solid rgba(0,180,255,0.7);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: rgba(0,180,255,0.8);
+    transform: scale(1.05);
+}
+
+/* =========================================================
+   🌌 FOND GLOBAL PREMIUM
+   ========================================================= */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("fond_etoiles.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Inter", Arial, sans-serif;
+    color: #ffffff;
+}
+
+
+
+
+/* =========================================================
+   🌟 TITRE DU PAYS
+   ========================================================= */
+.header-banner {
+    width: 85%;
+    margin: 35px auto 30px;
+    background: rgba(0,0,0,0.45);
+    padding: 28px;
+    border-radius: 18px;
+    text-align: center;
+    border: 1px solid rgba(0,180,255,0.45);
+    box-shadow: 0 0 35px rgba(0,180,255,0.25);
+}
+
+.header-banner h1 {
+    margin: 5px 0 10px;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    opacity: 0.85;
+    font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   📊 STATISTIQUES GLOBALes
+   ========================================================= */
+.stats-grid {
+    width: 85%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.stat-card {
+    background: rgba(0,0,0,0.45);
+    padding: 22px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(0,180,255,0.45);
+    box-shadow: 0 0 30px rgba(0,180,255,0.25);
+}
+
+.stat-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00baff;
+}
+
+
+/* =========================================================
+   📌 MINI-RÉSUMÉ
+   ========================================================= */
+.mini-resume {
+    width: 85%;
+    margin: 35px auto;
+    background: rgba(0,0,0,0.45);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,180,255,0.45);
+    box-shadow: 0 0 25px rgba(0,180,255,0.25);
+}
+
+.mini-resume h2 {
+    margin-bottom: 12px;
+}
+
+.mini-resume p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   🔍 SECTIONS (Bolides, Mét, Éclipses)
+   ========================================================= */
+.section-block {
+    width: 85%;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgba(0,0,0,0.45);
+    border-radius: 18px;
+    border: 1px solid rgba(0,180,255,0.45);
+    box-shadow: 0 0 35px rgba(0,180,255,0.25);
+}
+
+.section-block h2 {
+    margin-bottom: 18px;
+    font-size: 1.6rem;
+}
+
+
+/* =========================================================
+   📋 TABLEAUX PREMIUM
+   ========================================================= */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    background: rgba(0,0,0,0.3);
+}
+
+.data-table th, 
+.data-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(0,180,255,0.35);
+    text-align: left;
+}
+
+.data-table th {
+    background: rgba(0,180,255,0.25);
+    font-weight: bold;
+}
+
+.data-table tr:hover {
+    background: rgba(0,180,255,0.12);
+    transition: 0.2s;
+}
+
+
+/* =========================================================
+   🔘 BOUTONS PREMIUM
+   ========================================================= */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: rgba(0,180,255,0.5);
+    color: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(0,180,255,0.7);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.2s;
+    box-shadow: 0 0 15px rgba(0,180,255,0.25);
+}
+
+.btn:hover {
+    background: rgba(0,180,255,0.8);
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   📱 RESPONSIVE
+   ========================================================= */
+@media (max-width: 900px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-banner h1 {
+        font-size: 2rem;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(0,150,255,0.4);
+    border-radius: 8px;
+    color: #fff;
+    backdrop-filter: blur(4px);
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #00c8ff;
+    box-shadow: 0 0 10px rgba(0,150,255,0.5);
+}
+
+.filters-info {
+    margin-top: 6px;
+    font-size: 1.05rem;
+    color: #ffe4a6;
+    opacity: 0.95;
+    letter-spacing: 0.4px;
+}
+
+.filters-info strong {
+    color: #ffb84a;
+}
+
+.stat-card {
+    cursor: pointer;
+    user-select: none;
+    transition: 0.25s;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(255, 185, 80, 0.55);
+    border-color: #ffb84a;
+}
+
+.stat-card.selected {
+    box-shadow: 0 0 30px rgba(255, 200, 100, 0.7);
+    transform: translateY(-3px);
+}
+
